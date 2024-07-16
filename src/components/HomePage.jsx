@@ -1,6 +1,6 @@
 import React from 'react'
 import '../components/css/home.css'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function HomePage() {
   return (
@@ -8,11 +8,11 @@ function HomePage() {
         <header className="main-header">
             <nav className='nav nav-items'>
                 <ul>
-                    <li><a href="h">HOME</a></li>
-                    <li><a href="h">ABOUT US</a></li>
-                    <li><a href="h">VIEW MAP</a></li>
-                    <li><a href="https://ma3sacco.netlify.app/login">LOGIN</a></li>
-                    <li><a href="https://ma3sacco.netlify.app/signup">SIGN UP</a></li>
+                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="">ABOUT US</Link></li>
+                    <li><Link to="">VIEW MAP</Link></li>
+                    <li><Link to="/login">LOGIN</Link></li>
+                    <li><Link to="/signup">SIGN UP</Link></li>
                 </ul>
                 {/* <ul className="user-authentication">
                     <li><a href="">LOGIN</a></li>
