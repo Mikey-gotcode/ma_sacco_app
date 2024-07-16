@@ -31,7 +31,7 @@ function SignUpForm() {
         console.log(actor)
 
         try {
-            const response=await fetch('http://localhost:5000/sacco/register',{
+            const response=await fetch('https://server-application-rizh.onrender.com/api/sacco/register',{
                 method:'POST',
                 headers:{'Content-Type':'Application/json'},
                 body:JSON.stringify(actor)

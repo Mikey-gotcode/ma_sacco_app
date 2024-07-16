@@ -21,7 +21,7 @@ function LoginForm() {
         console.log("button pressed")
 
         try {
-            const response=await fetch('http://localhost:5000/sacco/login',{
+            const response=await fetch('https://server-application-rizh.onrender.com/api/data/sacco/login',{
                 method:'POST',
                 headers:{'Content-Type':'Application/json'},
                 body:JSON.stringify(actor)

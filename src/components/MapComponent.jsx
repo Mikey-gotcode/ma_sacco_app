@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Map, { Marker } from 'react-map-gl';
 import io from 'socket.io-client';
 
-const socket = io('http://your-server-url'); // Replace with your server URL
+const socket = io('https://server-application-rizh.onrender.com'); // Replace with your server URL
 
 const MapComponent = () => {
   const [vehicles, setVehicles] = useState([]);
