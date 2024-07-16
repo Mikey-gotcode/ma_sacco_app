@@ -11,8 +11,8 @@ function HomePage() {
                     <li><a href="h">HOME</a></li>
                     <li><a href="h">ABOUT US</a></li>
                     <li><a href="h">VIEW MAP</a></li>
-                    <li><a href="http://localhost:3000/login">LOGIN</a></li>
-                    <li><a href="http://localhost:3000/signup">SIGN UP</a></li>
+                    <li><a href="https://ma3sacco.netlify.app/login">LOGIN</a></li>
+                    <li><a href="https://ma3sacco.netlify.app/signup">SIGN UP</a></li>
                 </ul>
                 {/* <ul className="user-authentication">
                     <li><a href="">LOGIN</a></li>
