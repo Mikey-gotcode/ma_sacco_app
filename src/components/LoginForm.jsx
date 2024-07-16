@@ -23,7 +23,6 @@ function LoginForm() {
         try {
             const response=await fetch('https://server-application-rizh.onrender.com/sacco/login',{
                 method:'POST',
-                mode:'cors',
                 headers:{'Content-Type':'Application/json'},
                 body:JSON.stringify(actor)
             })
