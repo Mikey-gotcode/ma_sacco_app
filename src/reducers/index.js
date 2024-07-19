@@ -3,7 +3,7 @@ const initialState = {
     vehicleRecords: 'ReadVehicle'
   };
   
-  const rootReducer = (state = initialState, action) => {
+  const mainContentReducer = (state = initialState, action) => {
     switch (action.type) {
       case 'SET_MAIN_CONTENT':
         return {
@@ -22,5 +22,5 @@ const initialState = {
     
   };
   
-  export default rootReducer;
+  export default mainContentReducer;
   

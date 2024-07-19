@@ -34,33 +34,5 @@ const MainContent = () => {
     );
 };
 
-// const VehicleAttachment = () => {
-//     const mainContent = useSelector((state) => state.vehicleRecords);
-//     //console.log(mainContent)
-
-//     let ComponentToRender;
-//     switch (mainContent) {
-//         case 'CreateVehicle':
-//             ComponentToRender = CreateVehicle;
-//             break;
-//         case 'ReadVehicle':
-//             ComponentToRender = ReadVehicle;
-//             break;
-//         case 'UpdateVehicle':
-//             ComponentToRender = UpdateVehicle;
-//             break;
-//         case 'DeleteVehicle':
-//             ComponentToRender = DeleteVehicle;
-//             break;
-//         default:
-//             ComponentToRender = ReadVehicle;
-//     }
-
-//     return (
-//         <div className='main-section'>
-//            <> <ComponentToRender/> </>
-//         </div>
-//     );
-// };
 
 export { MainContent };

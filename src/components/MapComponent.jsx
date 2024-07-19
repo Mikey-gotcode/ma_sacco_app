@@ -1,56 +1,62 @@
-// MapComponent.jsx
 import React, { useState, useEffect } from 'react';
-import Map, { Marker } from 'react-map-gl';
-import io from 'socket.io-client';
-
-const socket = io('https://server-application-rizh.onrender.com'); // Replace with your server URL
+import { useSelector } from 'react-redux';
+import Map from 'react-map-gl';
+import VehicleMarker from './VehicleMarker';
+import VehicleSubscription from './VehicleSubscription'; // Import the subscription component
 
 const MapComponent = () => {
-  const [vehicles, setVehicles] = useState([]);
+  const vehicles = useSelector(state => state.vehicles);
+  
+  const [viewport, setViewport] = useState({
+    latitude: 37.8,
+    longitude: -122.4,
+    zoom: 8,
+    bearing: 0,
+    pitch: 0
+  });
 
   useEffect(() => {
-    // Listen for vehicle location updates
-    socket.on('vehicleLocation', (data) => {
-      setVehicles((prevVehicles) => {
-        // Update vehicle locations
-        const updatedVehicles = prevVehicles.map(vehicle =>
-          vehicle.id === data.id ? { ...vehicle, ...data } : vehicle
-        );
-        // Add new vehicle if it doesn't exist
-        if (!updatedVehicles.find(vehicle => vehicle.id === data.id)) {
-          updatedVehicles.push(data);
-        }
-        return updatedVehicles;
-      });
-    });
-
-    // Clean up the effect
-    return () => {
-      socket.off('vehicleLocation');
-    };
-  }, []);
+    // Requesting location permission and setting map center
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        setViewport({
+          ...viewport,
+          latitude,
+          longitude
+        });
+      },
+      (error) => {
+        console.error('Error getting user location:', error);
+      }
+    );
+  }, [viewport]);
 
   return (
-    <Map
-      initialViewState={{
-        latitude: 37.8,
-        longitude: -122.4,
-        zoom: 8
-      }}
-      style={{ width: '100%', height: '100%' }}
-      mapStyle="mapbox://styles/mapbox/streets-v11"
-      mapboxAccessToken="your_mapbox_token" // Replace with your Mapbox token
-    >
-      {vehicles.map(vehicle => (
-        <Marker
-          key={vehicle.id}
-          latitude={vehicle.latitude}
-          longitude={vehicle.longitude}
-        >
-          <div style={{ backgroundColor: 'red', borderRadius: '50%', width: '10px', height: '10px' }} />
-        </Marker>
-      ))}
-    </Map>
+    <>
+      <VehicleSubscription /> {/* Use the subscription component */}
+      <Map
+        {...viewport}
+        width="300px"
+        height="300px"
+        onViewportChange={(newViewport) => setViewport(newViewport)}
+        mapStyle="mapbox://styles/mapbox/streets-v11"
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+        scrollZoom={true}
+        doubleClickZoom={true}
+        touchZoom={true}
+        dragPan={true}
+      >
+        {vehicles.map(vehicle => (
+          <VehicleMarker
+            key={vehicle.vehicleID}
+            latitude={vehicle.latitude}
+            longitude={vehicle.longitude}
+            vehicleID={vehicle.vehicleID}
+          />
+        ))}
+      </Map>
+    </>
   );
 };
 

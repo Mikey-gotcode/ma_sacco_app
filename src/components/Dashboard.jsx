@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import '../components/css/dashboard.css';
 import { useDispatch } from 'react-redux';
 import { MainContent } from './MainContent';
-import { setMainContent } from '../actions';
+import { setMainContent } from '../actions/index';
 
 const Dashboard = () => {
   const location = useLocation();
