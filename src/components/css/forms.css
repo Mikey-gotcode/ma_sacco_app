@@ -3,75 +3,84 @@ html, body {
     padding:0;
 }
 
-.background{
-    background-image:url("../assets/matatupic.jpg");
+.background {
+    background-image: url("../assets/matatupic.jpg");
     background-size: cover;
-    background-color: rgb(10, 0, 0,0.2);
+    background-color: rgba(10, 0, 0, 0.2);
     background-blend-mode: multiply;
-    height:100vh;
+    height: 100vh;
     width: 100vw;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: center;
-    
-    
 }
-.div-object{
-    display:grid;
-    justify-content:center;
+
+.div-object {
+    display: grid;
+    justify-content: center;
     margin: 20%;
     border-style: double;
     height: 400px;
     width: 400px;
     border-radius: 1em;
-    background-color: rgba(0,0,0,.6);
-
-
+    background-color: rgba(0, 0, 0, 0.6);
 }
-.form-body{
+
+.form-body {
     display: grid;
     grid-row: auto;
-    
-
 }
-.form-object{
+
+.form-object {
     display: grid;
     grid-template-rows: auto;
-
 }
-.section-header{
+
+.login-form {
+    display: flex;
+}
+
+.login-background {
+    background-color: black;
+}
+
+.section-header {
     text-align: center;
     margin: 0;
     font-size: 4em;
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
-    color:white;
+    color: white;
 }
-.btn{
+
+.btn {
     border-radius: 1em;
     max-width: auto;
-    background-color:rgb(70, 8, 128);
+    background-color: rgb(70, 8, 128);
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     align-items: center;
     padding: 10px;
     margin: auto;
-} .btn:hover{
-    background-color:rgb(70, 8, 128,0.3) ;
+}
+
+.btn:hover {
+    background-color: rgba(70, 8, 128, 0.3);
     cursor: pointer;
 }
-.btn-div{
+
+.btn-div {
     display: flex;
     flex-direction: row;
-    justify-content:center;
-    align-content:space-between;
-
+    justify-content: center;
+    align-content: space-between;
 }
 
-.input-label{
+.input-label {
     margin: 0;
     font-size: 2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.btn a{
+
+.btn a {
     text-decoration: none;
 }
