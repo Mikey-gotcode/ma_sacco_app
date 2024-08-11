@@ -5,7 +5,7 @@ import { subscribeSocketEvent,unsubscribeSocketEvent } from '../actions/socketAc
 import { receiveVehicleLocation } from '../actions/vehicleActions'
 
 
-const socket =io('https://backend-server-86l5.onrender.com0')
+const socket =io('https://backend-server-86l5.onrender.com')
 
 const VehicleSubscription=()=>{
     const dispatch=useDispatch()
