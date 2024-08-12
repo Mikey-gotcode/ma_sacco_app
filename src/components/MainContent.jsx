@@ -7,7 +7,8 @@ import FareComponent from '../components/FareComponent';
 
 const MainContent = () => {
     const mainContent = useSelector((state) => state.content.mainContent);
-    //console.log(mainContent)
+
+    console.log(mainContent)
 
     let ComponentToRender;
     switch (mainContent) {
