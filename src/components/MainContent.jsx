@@ -6,7 +6,7 @@ import MapComponent from '../components/MapComponent';
 import FareComponent from '../components/FareComponent';
 
 const MainContent = () => {
-    const mainContent = useSelector((state) => state.mainContent);
+    const mainContent = useSelector((state) => state.content.mainContent);
     //console.log(mainContent)
 
     let ComponentToRender;
