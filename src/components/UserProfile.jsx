@@ -13,13 +13,13 @@ const UserProfile = () => {
     const data = location.state;
 
     useEffect(() => {
-        if (data && data.sacco) {
+        if (data) {
             setActor({
-                saccoName: data.sacco.saccoName, 
-                saccoOwner: data.sacco.saccoOwner, 
-                username: data.sacco.username, 
-                email: data.sacco.email,
-                phonenumber: data.sacco.phoneNumber 
+                saccoName: data.saccoName, 
+                saccoOwner: data.saccoOwner, 
+                username: data.username, 
+                email: data.email,
+                phonenumber: data.phoneNumber 
             });
         }
     }, [data]);

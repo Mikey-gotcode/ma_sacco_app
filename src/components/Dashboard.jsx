@@ -20,7 +20,7 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("data received",data.saccoName)
+    //console.log("data received",data.saccoName)
     if (data) {
       setActor({
         saccoName: data.saccoName, 
