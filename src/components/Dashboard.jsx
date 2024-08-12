@@ -20,6 +20,7 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("data received",data)
     if (data && data.sacco) {
       setActor({
         saccoName: data.sacco.saccoName, 
@@ -29,6 +30,9 @@ const Dashboard = () => {
         phonenumber: data.sacco.phoneNumber 
       });
       setLoading(false);
+    }else{
+      console.log('no sacco data found')
+      setLoading(false)
     }
   }, [data]);
   const handleAccountInformation=(e)=>{

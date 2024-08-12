@@ -19,7 +19,7 @@ function LoginForm() {
     try {
       const response = await fetch('https://backend-server-86l5.onrender.com/sacco/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'Application/json' },
         body: JSON.stringify(actor),
       });
 
