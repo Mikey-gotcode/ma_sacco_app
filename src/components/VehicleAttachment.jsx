@@ -7,7 +7,7 @@ import UpdateVehicle from './CRUD/UpdateVehicle';
 import DeleteVehicle from './CRUD/DeleteVehicle';
 
 const VehicleAttachment = () => {
-    const mainContent = useSelector((state) => state.records.vehicleRecords);
+    const mainContent = useSelector((state) => state.vehicleRecords);
     console.log(mainContent);
 
     let ComponentToRender;
