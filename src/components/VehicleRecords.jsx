@@ -41,10 +41,10 @@ const VehicleRecords = () => {
         <div className='main-section'>
         <VehicleAttachment/>
         <div className="main-panel crud-buttons">
-                <button onClick={() => dispatch(setVehicleRecords("CreateVehicle"))}>Create</button>
-                <button onClick={() => dispatch(setVehicleRecords("ReadVehicle"))}>Read</button>
-                <button onClick={() => dispatch(setVehicleRecords("UpdateVehicle"))}>Update</button>
-                <button onClick={() => dispatch(setVehicleRecords("DeleteVehicle"))}>Delete</button>
+                <button onClick={() => {console.log('Create Button'); dispatch(setVehicleRecords("CreateVehicle"))}}>Create</button>
+                <button onClick={() => {console.log('Read Button'); dispatch(setVehicleRecords("ReadVehicle"))}}>Read</button>
+                <button onClick={() => {console.log('Update Record'); dispatch(setVehicleRecords("UpdateVehicle"))}}>Update</button>
+                <button onClick={() => {console.log('Delete Records'); dispatch(setVehicleRecords("DeleteVehicle"))}}>Delete</button>
             </div>
         </div>
     );

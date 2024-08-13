@@ -1,7 +1,5 @@
 const initialState = {
-    mainContent: 'UserProfile',
-    records:{ 
-        vehicleRecords: 'ReadVehicle'}
+    mainContent: 'UserProfile'
   };
   
   const mainContentReducer = (state = initialState, action) => {
@@ -11,15 +9,7 @@ const initialState = {
           ...state,
           mainContent: action.payload
         };
-      case 'SET_VEHICLE_RECORDS':
-        return {
-          ...state,
-          records:{
-            ...state.records,
-            vehicleRecords: action.payload
-          }
-         
-        };
+     
       default:
         return state;
         

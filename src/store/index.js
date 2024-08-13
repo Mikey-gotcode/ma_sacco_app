@@ -3,11 +3,13 @@ import {thunk} from 'redux-thunk';
 import socketReducer from '../reducers/socketReducer'; // Your socket reducer
 import mainContentReducer from '../reducers/index'; // Ensure this is the correct path
 import vehicleReducer from '../reducers/vehicleReducers'; // Ensure this is the correct path
+import VehicleContentReducer from '../reducers/vehicleContentReducer'
 
 // Combine reducers if you have multiple reducers
 const rootReducer = combineReducers({
   socket: socketReducer,
   content: mainContentReducer,
+  vehicleContent:VehicleContentReducer,
   vehicles: vehicleReducer
   // other reducers if any
 });
