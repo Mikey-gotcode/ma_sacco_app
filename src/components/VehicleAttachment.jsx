@@ -1,4 +1,3 @@
-// VehicleAttachment.jsx
 import React from 'react';
 import { useSelector } from 'react-redux';
 import CreateVehicle from './CRUD/CreateVehicle';
@@ -7,7 +6,7 @@ import UpdateVehicle from './CRUD/UpdateVehicle';
 import DeleteVehicle from './CRUD/DeleteVehicle';
 
 const VehicleAttachment = () => {
-    const mainContent = useSelector((state) => state.records.vehicleRecords);
+    const mainContent = useSelector((state) => state.records?.vehicleRecords || 'ReadVehicle');
     console.log(mainContent);
 
     let ComponentToRender;
