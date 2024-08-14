@@ -22,6 +22,7 @@ const Dashboard = () => {
   useEffect(() => {
     //console.log("data received",data.saccoName)
     if (data||data.sacco ) {
+      console.log(data)
       setActor({
         saccoName: data.saccoName, 
         saccoOwner: data.saccoOwner, 
@@ -35,6 +36,8 @@ const Dashboard = () => {
       setLoading(false)
     }
   }, [data]);
+
+  console.log("actor",actor)
   const handleAccountInformation=(e)=>{
     e.preventDefault();
     dispatch(setMainContent('UserProfile'));
