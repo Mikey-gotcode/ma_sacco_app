@@ -26,7 +26,7 @@ function LoginForm() {
       const data = await response.json();
       console.log(data)
       if (data) {
-        const loggedData = data;
+        const loggedData = data.sacco;
         navigate('/dashboard', { state: loggedData });
       } else {
         // Handle login failure

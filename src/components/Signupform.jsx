@@ -40,7 +40,7 @@ function SignUpForm() {
             const data=await response.json()
             console.log(data)
             if (data) {
-                const savedVehicle= data
+                const savedVehicle= data.savedSacco
                 navigate('/dashboard',{state:savedVehicle})
             } else {
                 
