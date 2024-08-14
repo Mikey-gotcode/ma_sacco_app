@@ -7,9 +7,8 @@ const vehicleContentReducer= (state=initialState,action)=>{
         case 'SET_VEHICLE_RECORDS':
             return{
                 ...state,
-                records:{
-                    vehicleRecords:action.payload
-                }
+                vehicleRecords:action.payload
+                
             }
             default:
                 return state
