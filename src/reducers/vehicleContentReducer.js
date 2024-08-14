@@ -1,7 +1,5 @@
 const initialState={
-    records:{
-        vehicleRecords:'ReadVehicle'
-    }
+    records:'ReadVehicle'
 }
 
 const vehicleContentReducer= (state=initialState,action)=>{
