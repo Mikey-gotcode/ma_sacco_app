@@ -21,7 +21,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     //console.log("data received",data.saccoName)
-    if (data) {
+    if (data||data.sacco ) {
       setActor({
         saccoName: data.saccoName, 
         saccoOwner: data.saccoOwner, 
