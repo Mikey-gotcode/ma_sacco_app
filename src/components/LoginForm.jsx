@@ -24,6 +24,7 @@ function LoginForm() {
       });
 
       const data = await response.json();
+      console.log(data)
       if (data) {
         const loggedData = data;
         navigate('/dashboard', { state: loggedData });
