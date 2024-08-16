@@ -1,24 +1,29 @@
-import { SUBSCRIBE_SOCKET_EVENT,UNSUBSCRIBE_SOCKET_EVENT } from "../actions/socketActions"
+import { SUBSCRIBE_SOCKET_EVENT, UNSUBSCRIBE_SOCKET_EVENT } from "../actions/socketActions";
 
-const initialState={
-    subcsribedEvents:[],
+const initialState = {
+    subscribedEvents: [],
+};
 
-}
-const socketReducer=(state=initialState,action)=>{
-    switch(action.type){
+const socketReducer = (state = initialState, action) => {
+    switch (action.type) {
         case SUBSCRIBE_SOCKET_EVENT:
-            return{
+            return {
                 ...state,
-                subcsribedEvents:[...state.subcsribedEvents,{event:action.payload},{callback:action.payload.callback}]
-            }
+                subscribedEvents: [
+                    ...state.subscribedEvents, 
+                    { event: action.payload.event, callback: action.payload.callback }
+                ],
+            };
         case UNSUBSCRIBE_SOCKET_EVENT:
-            return{
+            return {
                 ...state,
-                subcsribedEvents:[...state.subcsribedEvents.filter((event)=>event.event)]
-            }
+                subscribedEvents: state.subscribedEvents.filter(
+                    (subscribedEvent) => subscribedEvent.event !== action.payload.event
+                ),
+            };
         default:
-            return state
+            return state;
     }
-}
+};
 
-export default socketReducer
+export default socketReducer;
