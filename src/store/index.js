@@ -9,7 +9,7 @@ import VehicleContentReducer from '../reducers/vehicleContentReducer'
 const rootReducer = combineReducers({
   socket: socketReducer,
   content: mainContentReducer,
-  vehicleContent:VehicleContentReducer,
+  records:VehicleContentReducer,
   vehicles: vehicleReducer
   // other reducers if any
 });
