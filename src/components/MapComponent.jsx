@@ -5,7 +5,7 @@ import VehicleMarker from './VehicleMarker';
 import VehicleSubscription from './VehicleSubscription'; // Import the subscription component
 
 const MapComponent = () => {
-  const vehicles = useSelector(state => state.vehicles);
+  const vehicles = useSelector(state => state.vehicles.vehicles);
   
   const [viewport, setViewport] = useState({
     latitude: 37.8,
@@ -47,7 +47,7 @@ const MapComponent = () => {
         touchZoom={true}
         dragPan={true}
       >
-        {vehicles.map(vehicle => (
+        {vehicles?.map(vehicle => (
           <VehicleMarker
             key={vehicle.vehicleID}
             latitude={vehicle.latitude}
