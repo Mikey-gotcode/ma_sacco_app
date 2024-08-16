@@ -17,7 +17,7 @@ const ReadVehicle = () => {
     setError(null);
 
     try {
-      const res = await fetch('http://localhost:5000/vehicle/searchVehicle', {
+      const res = await fetch('https://backend-server-86l5.onrender.com/vehicle/searchVehicle', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({vehicleNo:query}),

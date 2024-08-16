@@ -12,7 +12,7 @@ const DeleteVehicle = () => {
 
         // Here you would send a request to your backend to delete the vehicle
         // This is a placeholder URL, replace it with your actual endpoint
-        const response = await fetch(`https://localhost:5000/vehicle/delete/${vehicleRegistrationNumber}`, {
+        const response = await fetch(`https://backend-server-86l5.onrender.com/vehicle/delete/${vehicleRegistrationNumber}`, {
             method: 'DELETE',
         });
 

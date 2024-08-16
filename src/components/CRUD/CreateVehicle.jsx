@@ -42,7 +42,7 @@ const CreateVehicle = () => {
 
 
     try {
-      const response=await fetch('http://localhost:5000/vehicle/register',{
+      const response=await fetch('https://backend-server-86l5.onrender.com/vehicle/register',{
         method:'POST',
         headers:{'Content-Type':'Application/json'},
         body:JSON.stringify(vehicle)

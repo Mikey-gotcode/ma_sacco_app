@@ -20,7 +20,7 @@ const UpdateVehicle = ({ vehicleId }) => {
        try {
          // Fetch vehicle data from the backend using vehicleId
         // This is a placeholder URL, replace it with your actual endpoint
-        await fetch(`https://localhost:5000/vehicles/update/${vehicleId}`)
+        await fetch(`https://backend-server-86l5.onrender.com/vehicles/update/${vehicleId}`)
             .then(response => response.json())
             .then(data => setFormValues(data))
             .catch(error => console.error('Error fetching vehicle data:', error));
@@ -43,7 +43,7 @@ const UpdateVehicle = ({ vehicleId }) => {
         e.preventDefault();
         // Send updated data to the backend
         // This is a placeholder URL, replace it with your actual endpoint
-        fetch(`https://localhost:5000/vehicles/update/${vehicleId}`, {
+        fetch(`https://backend-server-86l5.onrender.com/vehicles/update/${vehicleId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
