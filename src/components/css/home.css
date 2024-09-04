@@ -103,3 +103,16 @@ nav{
     width: 30px;
     height: 30px;
 }
+
+
+
+
+/*media queries*/
+/*Phone orientation*/
+@media(min-width:568px){
+
+}
+
+@media(min-width:768px){
+    
+}
